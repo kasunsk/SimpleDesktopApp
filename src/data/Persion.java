@@ -4,7 +4,7 @@ public class Persion {
 	
 	private String id;
 	private String name;
-	private boolean sex;
+	private String sex;
 	private String addres;
 	private String tpnumber;
 	
@@ -32,11 +32,11 @@ public class Persion {
 		this.addres = addres;
 	}
 	
-	public void setSex(boolean sex){
+	public void setSex(String sex){
 		this.sex = sex;
 	}
 	
-	private boolean getSex(){
+	public String getSex(){
 		return this.sex;
 	}
 	
@@ -44,11 +44,11 @@ public class Persion {
 		return this.addres;
 	}
 	
-	public String getTpnum(){
+	public String getTpNum(){
 		return this.tpnumber;
 	}
 	
-	public void setTpnumber(String tpnumber){
+	public void setTpNumber(String tpnumber){
 		this.tpnumber = tpnumber;
 	}
 

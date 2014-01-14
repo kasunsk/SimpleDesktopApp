@@ -1,6 +1,7 @@
 package controler;
 
 import java.util.Scanner;
+
 import data.Persion;
 
 public class Control {
@@ -29,7 +30,7 @@ public class Control {
 		System.out.println("2 if you want to serch a persion from the data base");
 		int a = input.nextInt();
 		
-	while(a != 1 || a != 2)	{
+	while(!(a == 1 || a == 2))	{
 		System.out.println("Chose a number 1 or 2 :");
 		a = input.nextInt();
 	}
@@ -43,25 +44,43 @@ public class Control {
 		System.out.print("Name : ");
 		String name = input.nextLine();
 		persion.setName(name);
+		System.out.println("....");
 		
 		System.out.print("ID Number : ");
 		String id = input.nextLine();
 		persion.setId(id);
+		System.out.println();
 		
 		System.out.print("Sex (m or f) :  ");
 		String sex = input.nextLine();
+		System.out.println();
 		while(!(sex.equals("m") || sex.equals("f") )){
 			System.out.print("Sex (m or f) :  ");
 			sex = input.nextLine();
 		}
 		if (sex.equals("m"))
-			persion.setSex(true);
+			persion.setSex("Male");
 		else 
-			persion.setSex(false);
+			persion.setSex("Female");
+		
+		System.out.println();
 		
 		System.out.print("Address : ");
 		String add = input.nextLine();
 		persion.setAddres(add);
+		System.out.println();
+		
+		System.out.print("TP Number : ");
+		String tp = input.nextLine();
+		persion.setTpNumber(tp);
+		System.out.println();
+		
+		System.out.println("Persion data succesfully added !");
+		System.out.println("Name : "+persion.getName());
+		System.out.println("ID : "+persion.getId());
+		System.out.println("Sex : "+persion.getSex());
+		System.out.println("Address : "+persion.getAddress());
+		System.out.println("TP Number : "+persion.getTpNum());
 		
 		
 	}
